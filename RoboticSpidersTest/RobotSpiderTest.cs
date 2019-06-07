@@ -35,7 +35,7 @@ namespace SpiderRobotsTest
         [DataRow(2, 4, Orientation.Right, "FLFLFRFFLF", "1 7 Left")]
         [DataRow(8, 16, Orientation.Up, "F", "The Spider's position is not on the wall.")]
         [DataTestMethod]
-        public void SpiderCorrectly_ExploredWall(int x, int y, Orientation d, string instructions, string result)
+        public void Robotic_Spider_Explores_Wall(int x, int y, Orientation d, string instructions, string result)
         {
             var location = new Location(_wall, x, y, d);
             _spider = new RoboticSpider(_controlsConfig, location);
