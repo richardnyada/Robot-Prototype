@@ -10,7 +10,8 @@ namespace SpiderRobots
         {
         }
 
-
+       //Explore method used to pass set of instructions to the spider i.e. "L" - Turn left, "R" - Turn Right, "F" - Move Forward
+       //The method returns the current location of the spider on the wall after it has executed the command.
         public override string Explore(string instructions)
         {
             if (Location.X > Location.Wall.X || Location.Y > Location.Wall.Y || Location.X < 0 || Location.Y < 0)
@@ -18,7 +19,7 @@ namespace SpiderRobots
                 return "The Spider's position is not on the wall.";
             }
 
-
+            
             NavigationControls.ExecuteControls(instructions, Location);
 
 
